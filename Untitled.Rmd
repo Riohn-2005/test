@@ -1,0 +1,44 @@
+---
+title: "Untitled"
+output:
+  word_document: default
+  pdf_document: default
+date: "2024-12-24"
+---
+
+```{r cars}
+library(datasets)
+datasets::cars
+names(cars)
+summary(cars)
+dim(cars)
+```
+
+```{r cars }
+cars_speed = table(cars$speed)
+cars_dist = table(cars$dist)
+#bar plot
+par(mfrow = c(1,2))                     
+barplot(cars_speed, xlab = "Speed", width = 1,  
+        col = "blue", )
+barplot(cars_dist, xlab = "Distance", width = 5,  
+        col = "green", )
+```
+
+```{r cars}
+plot(x=cars$speed, y=cars$dist, main=' ', xlab='speed', ylab= 'distance')
+
+```
+
+```{r cars}
+par(mfrow = c(1,2)) 
+hist(cars$speed, xlab = " Car Speed", main = " ", ylim = c(0,20))
+hist(cars$dist, xlab = " Car Distance", main = " ", ylim = c(0,20))
+```
+
+```{r cars}
+par(mfrow = c(1,2)) 
+boxplot(cars$speed,xlab = 'Speed of Car', horizontal = TRUE)
+boxplot(cars$dist,xlab = 'Distance of Car', horizontal = TRUE)
+
+```
